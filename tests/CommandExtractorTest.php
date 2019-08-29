@@ -29,7 +29,7 @@ class CommandExtractorTest extends TestCase
     /** @test */
     public function the_command_extractor_can_parse_commands_from_a_file()
     {
-        $commands = $this->commandExtractor->extract([__DIR__ . '\stubs\testCaseA.txt']);
+        $commands = $this->commandExtractor->extract([__DIR__ . '/stubs/testCaseA.txt']);
 
         $this->assertEquals([
             'PLACE 0,0,NORTH',
@@ -37,7 +37,7 @@ class CommandExtractorTest extends TestCase
             'REPORT'
         ], $commands);
 
-        $commands = $this->commandExtractor->extract([__DIR__ . '\stubs\testCaseB.txt']);
+        $commands = $this->commandExtractor->extract([__DIR__ . '/stubs/testCaseB.txt']);
 
         $this->assertEquals([
             'PLACE 0,0,NORTH',
@@ -45,7 +45,7 @@ class CommandExtractorTest extends TestCase
             'REPORT'
         ], $commands);
 
-        $commands = $this->commandExtractor->extract([__DIR__ . '\stubs\testCaseC.txt']);
+        $commands = $this->commandExtractor->extract([__DIR__ . '/stubs/testCaseC.txt']);
 
         $this->assertEquals([
             'PLACE 1,2,EAST',
